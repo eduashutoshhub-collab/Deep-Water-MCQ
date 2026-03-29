@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Deep Water MCQ Test</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b1220;
+    color: #e2e8f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #38bdf8;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+}
+
+.card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    transition: 0.25s;
+}
+
+.card:hover {
+    border-color: #38bdf8;
+}
+
+.option {
+    padding: 10px;
+    margin: 6px 0;
+    background: #1f2937;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.option:hover {
+    background: #374151;
+}
+
+.correct {
+    background: #16a34a !important;
+}
+
+.wrong {
+    background: #dc2626 !important;
+}
+
+button {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 30px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Deep Water - 100 MCQ </h1>
+
+<div class="container" id="quiz"></div>
+
+<button onclick="downloadPDF()">Download Answer Sheet</button>
+
+<script>
+
+const questions = [
+
+/* ===== PART 1 (1–50) ===== */
+{q:"Who is the author of 'Deep Water'?",options:["William Douglas","Nelson Mandela","Alphonse Daudet","R.K. Narayan"],ans:"William Douglas"},
+{q:"What fear did Douglas develop?",options:["Height","Water","Darkness","Fire"],ans:"Water"},
+{q:"Where did Douglas go to learn swimming?",options:["River","Lake","YMCA pool","Sea"],ans:"YMCA pool"},
+{q:"At what age did Douglas first experience fear?",options:["3","5","7","10"],ans:"3"},
+{q:"What happened at California beach?",options:["Wave knocked him down","He drowned","He swam","Nothing"],ans:"Wave knocked him down"},
+{q:"Who threw Douglas into the pool?",options:["Instructor","Friend","Big boy","Coach"],ans:"Big boy"},
+{q:"How deep was the pool?",options:["6 ft","9 ft","12 ft","15 ft"],ans:"9 ft"},
+{q:"What did Douglas feel while drowning?",options:["Joy","Peace","Terror","Sleep"],ans:"Terror"},
+{q:"How many times did he try to come up?",options:["Once","Twice","Thrice","Many times"],ans:"Many times"},
+{q:"What stopped him from breathing?",options:["Water","Fear","Fatigue","Pain"],ans:"Water"},
+{q:"What did he try to do to save himself?",options:["Swim","Jump","Push upward","Float"],ans:"Push upward"},
+{q:"What happened when he hit bottom?",options:["Jumped up","Sat","Cried","Stopped"],ans:"Jumped up"},
+{q:"What did fear do to him?",options:["Motivated","Paralyzed","Relaxed","Helped"],ans:"Paralyzed"},
+{q:"What did Douglas lose?",options:["Money","Control","Clothes","Friends"],ans:"Control"},
+{q:"Who saved Douglas?",options:["Instructor","Friend","Unknown","Coach"],ans:"Unknown"},
+{q:"What did he decide after incident?",options:["Quit swimming","Learn swimming","Ignore fear","Avoid water"],ans:"Learn swimming"},
+{q:"Who trained Douglas?",options:["Friend","Instructor","Coach","Teacher"],ans:"Instructor"},
+{q:"What method was used?",options:["Fast training","Gradual training","Jumping","Diving"],ans:"Gradual training"},
+{q:"What was tied to his waist?",options:["Rope","Belt","Tube","Chain"],ans:"Belt"},
+{q:"What was attached to belt?",options:["Stick","Pulley rope","Hook","Ring"],ans:"Pulley rope"},
+{q:"What did instructor teach first?",options:["Jump","Float","Swim","Dive"],ans:"Float"},
+{q:"What did Douglas practice repeatedly?",options:["Floating","Running","Jumping","Diving"],ans:"Floating"},
+{q:"How long did training last?",options:["Weeks","Months","Years","Days"],ans:"Months"},
+{q:"What replaced fear?",options:["Anger","Confidence","Happiness","Energy"],ans:"Confidence"},
+{q:"What did Douglas do after training?",options:["Test himself","Quit","Teach","Ignore"],ans:"Test himself"},
+{q:"Where did he go for testing?",options:["Sea","Lake Wentworth","River","Pool"],ans:"Lake Wentworth"},
+{q:"What did he overcome?",options:["Fear","Pain","Weakness","All"],ans:"Fear"},
+{q:"What did he learn?",options:["Swimming","Courage","Confidence","All"],ans:"All"},
+{q:"What is main theme?",options:["Love","Fear and courage","War","Education"],ans:"Fear and courage"},
+{q:"What does fear symbolize?",options:["Weakness","Danger","Obstacle","All"],ans:"All"},
+{q:"What does courage bring?",options:["Fear","Success","Pain","Loss"],ans:"Success"},
+{q:"What is moral?",options:["Avoid fear","Fight fear","Ignore fear","Fear wins"],ans:"Fight fear"},
+{q:"What does Douglas represent?",options:["Fearful man","Brave learner","Teacher","Child"],ans:"Brave learner"},
+{q:"What is tone of story?",options:["Happy","Serious","Humorous","Romantic"],ans:"Serious"},
+{q:"What did fear do to body?",options:["Relax","Freeze","Strengthen","Motivate"],ans:"Freeze"},
+{q:"What helped Douglas most?",options:["Practice","Luck","Friends","Money"],ans:"Practice"},
+{q:"What is importance of practice?",options:["Skill","Confidence","Courage","All"],ans:"All"},
+{q:"What did instructor ensure?",options:["Speed","Safety","Fun","Competition"],ans:"Safety"},
+{q:"What did Douglas gain?",options:["Money","Skill","Fear","Pain"],ans:"Skill"},
+{q:"What is final message?",options:["Fear wins","Courage wins","Avoid life","Stop trying"],ans:"Courage wins"},
+{q:"What did Douglas feel after success?",options:["Fear","Relief","Pain","Anger"],ans:"Relief"},
+{q:"What did swimming symbolize?",options:["Fear","Freedom","Danger","Pain"],ans:"Freedom"},
+{q:"What is story about?",options:["Swimming","Fear","Courage","All"],ans:"All"},
+{q:"What is psychological aspect?",options:["Fear","Confidence","Growth","All"],ans:"All"},
+{q:"What type of story?",options:["Fiction","Autobiographical","Drama","Poetry"],ans:"Autobiographical"},
+{q:"What did Douglas conquer?",options:["Water","Fear","Pain","All"],ans:"Fear"},
+{q:"What lesson for students?",options:["Study","Practice","Face fear","All"],ans:"Face fear"},
+{q:"What builds confidence?",options:["Luck","Practice","Fear","Money"],ans:"Practice"},
+{q:"What is key takeaway?",options:["Run away","Face fear","Ignore","Stop"],ans:"Face fear"},
+{q:"What did fear create?",options:["Courage","Weakness","Panic","Confidence"],ans:"Panic"},
+
+/* ===== PART 2 (51–100) ===== */
+{q:"What was Douglas childhood fear?",options:["Fire","Water","Darkness","Animals"],ans:"Water"},
+{q:"What caused fear initially?",options:["Accident","Wave","Fall","Fight"],ans:"Wave"},
+{q:"What did he remember during drowning?",options:["Fear","Peace","Dream","Joy"],ans:"Fear"},
+{q:"What did he feel in lungs?",options:["Air","Water","Pain","Nothing"],ans:"Water"},
+{q:"What did fear stop?",options:["Thinking","Movement","Breathing","All"],ans:"All"},
+{q:"What was instructor’s role?",options:["Guide","Teacher","Support","All"],ans:"All"},
+{q:"What technique used first?",options:["Jump","Float","Dive","Run"],ans:"Float"},
+{q:"What is importance of patience?",options:["Skill","Confidence","Success","All"],ans:"All"},
+{q:"What did Douglas test repeatedly?",options:["Courage","Swimming","Breathing","All"],ans:"All"},
+{q:"What is biggest enemy?",options:["Fear","Water","Instructor","Pain"],ans:"Fear"},
+{q:"What does fear do?",options:["Stops growth","Motivates","Helps","Teaches"],ans:"Stops growth"},
+{q:"What did Douglas prove?",options:["Fear wins","Man wins","Water wins","None"],ans:"Man wins"},
+{q:"What does success require?",options:["Practice","Courage","Time","All"],ans:"All"},
+{q:"What did Douglas challenge?",options:["Fear","Water","Instructor","Body"],ans:"Fear"},
+{q:"What is result of hard work?",options:["Fear","Success","Failure","Pain"],ans:"Success"},
+{q:"What does training give?",options:["Skill","Confidence","Fear","Pain"],ans:"Confidence"},
+{q:"What is mental strength?",options:["Fear","Courage","Weakness","Pain"],ans:"Courage"},
+{q:"What does story inspire?",options:["Fear","Courage","Weakness","Loss"],ans:"Courage"},
+{q:"What is effect of fear?",options:["Growth","Stop","Help","Motivate"],ans:"Stop"},
+{q:"What does Douglas finally enjoy?",options:["Swimming","Fear","Pain","Nothing"],ans:"Swimming"},
+{q:"What is symbol of victory?",options:["Fear","Swimming","Instructor","Pool"],ans:"Swimming"},
+{q:"What is fear compared to?",options:["Enemy","Friend","Teacher","Guide"],ans:"Enemy"},
+{q:"What did Douglas defeat?",options:["Water","Fear","Pain","All"],ans:"Fear"},
+{q:"What does effort lead to?",options:["Failure","Success","Pain","Fear"],ans:"Success"},
+{q:"What is outcome?",options:["Fear lost","Fear won","Tie","None"],ans:"Fear lost"},
+{q:"What is story lesson?",options:["Quit","Fight","Run","Ignore"],ans:"Fight"},
+{q:"What is role of teacher?",options:["Guide","Ignore","Punish","Leave"],ans:"Guide"},
+{q:"What is training importance?",options:["Skill","Fear","Pain","Loss"],ans:"Skill"},
+{q:"What is emotional journey?",options:["Fear to courage","Joy to pain","Loss to gain","None"],ans:"Fear to courage"},
+{q:"What does persistence do?",options:["Fail","Win","Stop","Delay"],ans:"Win"},
+{q:"What is courage?",options:["Fear","Strength","Weakness","Pain"],ans:"Strength"},
+{q:"What does success need?",options:["Effort","Time","Practice","All"],ans:"All"},
+{q:"What is fear effect?",options:["Growth","Block","Help","Teach"],ans:"Block"},
+{q:"What is victory?",options:["Fear","Winning over fear","Pain","Loss"],ans:"Winning over fear"},
+{q:"What does Douglas teach?",options:["Fear","Courage","Swimming","All"],ans:"All"},
+{q:"What does water represent?",options:["Fear","Life","Danger","All"],ans:"Fear"},
+{q:"What is turning point?",options:["Training","Fear","Instructor","Test"],ans:"Training"},
+{q:"What is key factor?",options:["Practice","Fear","Luck","Money"],ans:"Practice"},
+{q:"What does success show?",options:["Fear","Growth","Loss","Pain"],ans:"Growth"},
+{q:"What is message?",options:["Run","Fight fear","Ignore","Stop"],ans:"Fight fear"},
+{q:"What is confidence?",options:["Fear","Belief","Weakness","Pain"],ans:"Belief"},
+{q:"What is outcome of belief?",options:["Failure","Success","Fear","Loss"],ans:"Success"},
+{q:"What does story encourage?",options:["Fear","Try","Stop","Quit"],ans:"Try"},
+{q:"What is mental victory?",options:["Fear win","Mind win","Body win","None"],ans:"Mind win"},
+{q:"What is real strength?",options:["Money","Mind","Body","Luck"],ans:"Mind"},
+{q:"What is biggest lesson?",options:["Fear","Fight fear","Quit","Ignore"],ans:"Fight fear"},
+{q:"What does practice remove?",options:["Fear","Pain","Loss","All"],ans:"Fear"},
+{q:"What is final achievement?",options:["Swimming","Winning","Courage","All"],ans:"All"},
+{q:"What is success formula?",options:["Practice","Courage","Time","All"],ans:"All"},
+{q:"What does Douglas prove finally?",options:["Fear wins","Courage wins","Water wins","None"],ans:"Courage wins"}
+
+];// Generate remaining real-type conceptual questions
+const baseQs = [
+
+{q:"Who is the author of Deep Water?",options:["William Douglas","Nelson Mandela","Alphonse Daudet","R.K. Narayan"],ans:"William Douglas"},
+{q:"What was Douglas afraid of?",options:["Fire","Water","Darkness","Height"],ans:"Water"},
+{q:"Where did Douglas go to learn swimming?",options:["River","Lake","YMCA pool","Sea"],ans:"YMCA pool"},
+{q:"At what age did Douglas first experience fear?",options:["3","5","7","10"],ans:"3"},
+{q:"What happened at the beach?",options:["Wave knocked him down","He drowned","He swam","Nothing"],ans:"Wave knocked him down"},
+{q:"Who threw Douglas into the pool?",options:["Friend","Instructor","Big boy","Coach"],ans:"Big boy"},
+{q:"How deep was the pool?",options:["6 ft","9 ft","12 ft","15 ft"],ans:"9 ft"},
+{q:"What did Douglas feel while drowning?",options:["Joy","Fear","Peace","Sleep"],ans:"Fear"},
+{q:"How many times did he try to come up?",options:["Once","Twice","Thrice","Many times"],ans:"Many times"},
+{q:"What stopped his breathing?",options:["Water","Fear","Pain","Fatigue"],ans:"Water"},
+
+{q:"What decision did Douglas take after incident?",options:["Quit swimming","Learn swimming","Ignore fear","Avoid water"],ans:"Learn swimming"},
+{q:"Who trained Douglas?",options:["Friend","Instructor","Coach","Teacher"],ans:"Instructor"},
+{q:"What method was used?",options:["Fast training","Gradual training","Jumping","Diving"],ans:"Gradual training"},
+{q:"What was tied to his waist?",options:["Rope","Belt","Tube","Chain"],ans:"Belt"},
+{q:"What was attached to belt?",options:["Pulley rope","Stick","Hook","Ring"],ans:"Pulley rope"},
+{q:"What was first skill taught?",options:["Jump","Float","Dive","Run"],ans:"Float"},
+{q:"How long did training continue?",options:["Days","Weeks","Months","Years"],ans:"Months"},
+{q:"Fear was replaced by?",options:["Anger","Confidence","Joy","Pain"],ans:"Confidence"},
+{q:"Where did Douglas test himself?",options:["River","Lake Wentworth","Sea","Pool"],ans:"Lake Wentworth"},
+{q:"What is main theme?",options:["Love","Fear vs Courage","War","Money"],ans:"Fear vs Courage"},
+
+{q:"Douglas represents?",options:["Fearful person","Brave learner","Teacher","Child"],ans:"Brave learner"},
+{q:"Story tone?",options:["Happy","Serious","Funny","Romantic"],ans:"Serious"},
+{q:"Fear did what to him?",options:["Motivated","Paralyzed","Relaxed","Helped"],ans:"Paralyzed"},
+{q:"Practice gives?",options:["Fear","Skill","Pain","Loss"],ans:"Skill"},
+{q:"Moral of story?",options:["Run away","Fight fear","Ignore fear","Stop trying"],ans:"Fight fear"},
+{q:"Water symbolizes?",options:["Fear","Life","Danger","All"],ans:"Fear"},
+{q:"Courage leads to?",options:["Failure","Success","Pain","Fear"],ans:"Success"},
+{q:"Instructor ensured?",options:["Speed","Safety","Fun","Competition"],ans:"Safety"},
+{q:"Final feeling of Douglas?",options:["Fear","Relief","Pain","Anger"],ans:"Relief"},
+{q:"Swimming symbolizes?",options:["Fear","Freedom","Pain","Loss"],ans:"Freedom"},
+
+{q:"Story type?",options:["Fiction","Autobiographical","Drama","Poetry"],ans:"Autobiographical"},
+{q:"Fear creates?",options:["Confidence","Panic","Growth","Joy"],ans:"Panic"},
+{q:"He conquered?",options:["Water","Fear","Pain","All"],ans:"Fear"},
+{q:"Practice importance?",options:["Skill","Confidence","All","None"],ans:"All"},
+{q:"Biggest enemy?",options:["Water","Fear","Instructor","Pain"],ans:"Fear"},
+{q:"Success needs?",options:["Practice","Time","Effort","All"],ans:"All"},
+{q:"Fear stops?",options:["Growth","Thinking","Movement","All"],ans:"All"},
+{q:"Instructor role?",options:["Guide","Teacher","Support","All"],ans:"All"},
+{q:"Turning point?",options:["Fear","Training","Test","Instructor"],ans:"Training"},
+{q:"Douglas proved?",options:["Fear wins","Man wins","Water wins","None"],ans:"Man wins"},
+
+{q:"What did he feel in lungs?",options:["Air","Water","Pain","Nothing"],ans:"Water"},
+{q:"Fear effect?",options:["Help","Block","Teach","Motivate"],ans:"Block"},
+{q:"Confidence is?",options:["Fear","Belief","Weakness","Pain"],ans:"Belief"},
+{q:"Outcome of belief?",options:["Failure","Success","Fear","Loss"],ans:"Success"},
+{q:"Mental strength?",options:["Fear","Courage","Weakness","Pain"],ans:"Courage"},
+{q:"Persistence leads to?",options:["Fail","Win","Stop","Delay"],ans:"Win"},
+{q:"Effort leads to?",options:["Failure","Success","Pain","Fear"],ans:"Success"},
+{q:"Victory means?",options:["Fear","Winning over fear","Loss","Pain"],ans:"Winning over fear"},
+{q:"Practice removes?",options:["Fear","Pain","Loss","All"],ans:"Fear"},
+{q:"Story encourages?",options:["Quit","Try","Stop","Run"],ans:"Try"},
+
+{q:"Fear compared to?",options:["Friend","Enemy","Guide","Teacher"],ans:"Enemy"},
+{q:"Real strength?",options:["Money","Mind","Body","Luck"],ans:"Mind"},
+{q:"Mental victory?",options:["Fear wins","Mind wins","Body wins","None"],ans:"Mind wins"},
+{q:"Swimming gave?",options:["Fear","Confidence","Pain","Loss"],ans:"Confidence"},
+{q:"Biggest lesson?",options:["Run","Fight fear","Ignore","Stop"],ans:"Fight fear"},
+{q:"Douglas enjoyed?",options:["Fear","Swimming","Pain","Nothing"],ans:"Swimming"},
+{q:"Success formula?",options:["Practice","Courage","Time","All"],ans:"All"},
+{q:"Fear does?",options:["Help","Stop growth","Teach","Motivate"],ans:"Stop growth"},
+{q:"Water represents?",options:["Fear","Life","Danger","All"],ans:"Fear"},
+{q:"Final message?",options:["Fear wins","Courage wins","Quit","Ignore"],ans:"Courage wins"},
+
+{q:"Douglas childhood fear?",options:["Fire","Water","Darkness","Animals"],ans:"Water"},
+{q:"Cause of fear?",options:["Accident","Wave","Fall","Fight"],ans:"Wave"},
+{q:"What blocked thinking?",options:["Fear","Water","Pain","Fatigue"],ans:"Fear"},
+{q:"What helped most?",options:["Luck","Practice","Money","Friends"],ans:"Practice"},
+{q:"Fear affects?",options:["Mind","Body","Breathing","All"],ans:"All"},
+{q:"Training gave?",options:["Fear","Confidence","Pain","Loss"],ans:"Confidence"},
+{q:"Instructor importance?",options:["Guide","Ignore","Punish","Leave"],ans:"Guide"},
+{q:"Confidence builds?",options:["Fear","Success","Pain","Loss"],ans:"Success"},
+{q:"Key takeaway?",options:["Run","Face fear","Ignore","Stop"],ans:"Face fear"},
+{q:"Douglas final success?",options:["Swimming","Winning","Courage","All"],ans:"All"},
+
+{q:"Fear blocks?",options:["Growth","Thinking","Action","All"],ans:"All"},
+{q:"Practice improves?",options:["Skill","Confidence","All","None"],ans:"All"},
+{q:"Fear is?",options:["Friend","Enemy","Guide","Help"],ans:"Enemy"},
+{q:"Courage is?",options:["Weakness","Strength","Pain","Fear"],ans:"Strength"},
+{q:"Success depends on?",options:["Luck","Effort","Practice","All"],ans:"All"},
+{q:"Fear leads to?",options:["Growth","Panic","Success","Confidence"],ans:"Panic"},
+{q:"Douglas struggled with?",options:["Fear","Water","Confidence","All"],ans:"All"},
+{q:"Instructor method?",options:["Sudden","Gradual","Fast","None"],ans:"Gradual"},
+{q:"Swimming represents?",options:["Fear","Freedom","Pain","Loss"],ans:"Freedom"},
+{q:"Main idea?",options:["Love","Fear vs Courage","War","Money"],ans:"Fear vs Courage"}
+
+];
+while(questions.length < 100){
+    let i = questions.length;
+    questions.push({
+        q: baseQs[i % baseQs.length] + " ("+(i+1)+")",
+        options:["Poverty","Tradition","Both","None"],
+        ans:"Both"
+    });
+}
+
+const quiz = document.getElementById("quiz");
+
+questions.forEach((q,index)=>{
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    const title = document.createElement("h3");
+    title.innerText = `${index+1}. ${q.q}`;
+    card.appendChild(title);
+
+    q.options.forEach(opt=>{
+        const btn = document.createElement("div");
+        btn.classList.add("option");
+        btn.innerText = opt;
+
+        btn.onclick = ()=>{
+            const all = btn.parentElement.querySelectorAll(".option");
+            all.forEach(o=>o.style.pointerEvents="none");
+
+            if(opt===q.ans){
+                btn.classList.add("correct");
+            } else {
+                btn.classList.add("wrong");
+                all.forEach(o=>{
+                    if(o.innerText===q.ans){
+                        o.classList.add("correct");
+                    }
+                });
+            }
+        };
+
+        card.appendChild(btn);
+    });
+
+    quiz.appendChild(card);
+});
+
+function downloadPDF(){
+    let content = "<h2>Answer Sheet</h2><table border='1'><tr><th>Question</th><th>Answer</th></tr>";
+
+    questions.forEach((q,i)=>{
+        content += `<tr><td>${i+1}. ${q.q}</td><td>${q.ans}</td></tr>`;
+    });
+
+    content += "</table>";
+
+    let win = window.open('', '', 'width=800,height=700');
+    win.document.write(content);
+    win.document.close();
+    win.print();
+}
+
+</script>
+
+</body>
+</html>
